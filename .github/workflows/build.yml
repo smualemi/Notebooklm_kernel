@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-kernel:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Maximize Runner Disk Space
@@ -23,7 +23,7 @@ jobs:
       - name: Install Build Dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y build-essential bc zip libssl-dev libfl-dev curl bison flex lz4 cpio python3 python-is-python3
+          sudo apt-get install -y build-essential bc zip libssl-dev libfl-dev curl bison flex lz4 cpio python3 python-is-python3 libncurses-dev lib32z1
 
       - name: Clone Source and Toolchains
         run: |
